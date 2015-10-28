@@ -10,7 +10,7 @@ from numpy import *
 fastq = open('rosalind_bphr.txt')
 #fastq = open('testFASTQ.txt')
 threshold = int(fastq.readline().rstrip())
-records = list(SeqIO.parse(fastq, 'fastq'))
+records = list(SeqIO.parse(fastq,'fastq'))
 
 phredQuality = [record.letter_annotations['phred_quality'] for record in records]
 #phredQuality = []
